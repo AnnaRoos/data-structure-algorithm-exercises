@@ -4,10 +4,9 @@
 
 
 //Queues
-//Did not know how to create this myself
 
-
-//Example with a first in first out principle
+//Example from article
+//A first in first out principle
 class Queue {
   constructor() {
     this.data = [];
@@ -56,7 +55,7 @@ class Queue2 {
 
 
 //Stacks
-//Did not know how to create this myself
+//Example from article
 class Stack {
   constructor() {
     this.data = [];
@@ -113,6 +112,7 @@ class Queue3 {
     return record;
   }
 }
+
 
 
 module.exports = {
