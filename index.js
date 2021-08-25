@@ -4,6 +4,9 @@
 
 
 //Queues
+//Did not know how to create this myself
+
+
 //Example with a first in first out principle
 class Queue {
   constructor() {
@@ -52,7 +55,69 @@ class Queue2 {
 }
 
 
+//Stacks
+//Did not know how to create this myself
+class Stack {
+  constructor() {
+    this.data = [];
+  }
+
+  push(record) {
+    this.data.push(record);
+  }
+
+  pop() {
+    return this.data.pop();
+  }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+}
+
+class Queue3 {
+  constructor() {
+    this.first = new Stack();
+    this.second = new Stack();
+  }
+
+  enqueue(record) {
+    this.first.push(record);
+  }
+
+  dequeue() {
+    while (this.first.peek()) {
+      this.second.push(this.first.pop());
+    }
+
+    const record = this.second.pop();
+
+    while (this.second.peek()) {
+      this.first.push(this.second.pop());
+    }
+
+    return record;
+  }
+
+  peek() {
+    while (this.first.peek()) {
+      this.second.push(this.first.pop());
+    }
+
+    const record = this.second.peek();
+
+    while (this.second.peek()) {
+      this.first.push(this.second.pop());
+    }
+
+    return record;
+  }
+}
+
+
 module.exports = {
   Queue,
-  weave
+  weave,
+  Queue3
+  
 };
