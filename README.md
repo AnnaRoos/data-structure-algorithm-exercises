@@ -5,4 +5,4 @@ These are from the data structure part.
 
 I'm writing my own solutions first and then comparing them with the solutions from the article.
 
-I'm using Jest to write the tests for the functions.
+I'm using Jest to tests my solutions.
